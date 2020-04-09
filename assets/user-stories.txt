@@ -1,0 +1,1 @@
+user clicks to generate a colour and then a number.
