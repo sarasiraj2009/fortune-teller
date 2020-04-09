@@ -8,7 +8,6 @@ def get_colour():
     colour = colours[randint(0,3)]
     return Response(colour, mimetype='text/plain')
 
-@app.route('/post/color', methods=['POST'])
-def post_color():
+@app.route('/post/colour', methods=['POST'])
+def post_colour():
     return Response(request.data.decode("utf-8"), mimetype='text/plain')
-
