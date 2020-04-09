@@ -4,7 +4,7 @@ from random import randint
 
 @app.route('/get/color', methods=['GET'])
 def get_color():
-    animals = ['red', 'white', 'green', 'orange']
+    animals = ['red', 'white', 'green', 'orange', 'black']
     animal = animals[randint(0,3)]
     return Response(animal, mimetype='text/plain')
 
