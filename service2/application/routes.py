@@ -5,7 +5,7 @@ from random import randint
 @app.route('/get/colour', methods=['GET'])
 def get_colour():
     colours = ['red', 'white', 'green', 'orange', 'black']
-    colour = colours[randint(0,3)]
+    colour = colours[randint(0,4)]
     return Response(colour, mimetype='text/plain')
 
 @app.route('/post/colour', methods=['POST'])
