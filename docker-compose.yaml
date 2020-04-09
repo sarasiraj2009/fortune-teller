@@ -1,0 +1,9 @@
+---
+services:
+  service3:
+    build: ./service3
+    ports:
+      - protocol: tcp
+        published: 5003
+        target: 5003
+version: "3.7"
