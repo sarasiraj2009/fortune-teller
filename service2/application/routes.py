@@ -6,7 +6,7 @@ from random import randint
 
 @app.route('/selection/colour', methods=['GET'])
 def get_colour():
-    colours = ['red', 'white', 'green', 'orange', 'black']
+    colour = ['red', 'white', 'green', 'orange', 'black']
  #  colour = colours[randint(0,4)]
     return Response(colour[randint(0,4)], mimetype='text/plain')
  #  return Response(colour, mimetype='text/plain')
