@@ -1,9 +1,23 @@
----
+version: "3.7"
 services:
+  service1:
+    build: ./service1
+    ports:
+      - protocol: tcp
+        published: 5000
+        target: 5000
+
+  service2:
+    build: ./service2
+    ports:
+       - protocol: tcp
+         published: 5002
+         target: 5002
+
   service3:
     build: ./service3
     ports:
       - protocol: tcp
         published: 5003
         target: 5003
-version: "3.7"
+
