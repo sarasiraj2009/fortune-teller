@@ -7,5 +7,6 @@ from random import randint
 @app.route('/selection/number', methods = ['GET'])
 def number():
     numbers = randint(1,8)
-    return Response(numbers, mimetype='text/plain')
+    number_string = str(numbers)
+    return Response(number_string, mimetype='text/plain')
 
