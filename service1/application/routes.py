@@ -15,9 +15,9 @@ def fortune():
 @app.route('/get/colour', methods = ['GET'])
 def colour():
     colour = requests.get('http://service2:5002/selection/colour')
-    return render_template('fortune.html', title='Fortunes', colour=colour.text)
+    number = requests.get('http://service3:5003/selection/number')
+    return render_template('fortune.html', title='Fortunes', colour=colour.text, number=number.text)
 
 @app.route('/get/number', methods = ['GET'])
 def number():
-    number = requests.get('http://service3:5003/selection/number')
     return render_template('fortune.html', title='Fortune', number=number.text)
