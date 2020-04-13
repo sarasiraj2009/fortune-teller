@@ -18,6 +18,6 @@ def post_colour():
  """
 
 #  start testing - PP
-colour = get_colour()
-print(colour)
+# colour = get_colour()
+# print(colour)
 #  end testing - PP
