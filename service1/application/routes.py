@@ -18,6 +18,8 @@ def colour():
     number = requests.get('http://service3:5003/selection/number')
     return render_template('fortune.html', title='Fortunes', colour=colour.text, number=number.text)
 
-@app.route('/get/number', methods = ['GET'])
+# We dont' need the code below - PP
+""" @app.route('/get/number', methods = ['GET'])
 def number():
     return render_template('fortune.html', title='Fortune', number=number.text)
+ """
