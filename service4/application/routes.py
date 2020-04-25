@@ -22,5 +22,6 @@ def sentence():
     #elif colour == "white":
 
  
+
     return result
 
