@@ -1,5 +1,5 @@
 from application import app
-from Flask import request, Response
+from flask import request, Response
 import requests
 
 @app.route('/selection/sentence', methods =  ['POST', 'GET'])
