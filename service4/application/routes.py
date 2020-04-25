@@ -21,8 +21,6 @@ def sentence():
             result = "You'll have a red1 day"
     #elif colour == "white":
 
- """    send_result = {"result": result}        
-    return send_result """
-
+ 
     return result
 
