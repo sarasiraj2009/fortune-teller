@@ -21,3 +21,9 @@ services:
         published: 5003
         target: 5003
 
+  service4:
+    build: ./service4
+    ports:
+      - protocol: tcp
+        published: 5004
+        target: 5004
