@@ -6,6 +6,7 @@ import requests
 def sentence():
     sentences = ['You are a winner!', 'Fortune 2','Fortune 3','Fortune 4','Fortune 5','Fortune 6','Fortune 7','Fortune 8']
     fortune = requests.get('http://service1:5000/get/json')
+    fortune = fortune.json()
     colour = fortune["colour"]
     number = fortune["number"]
 
