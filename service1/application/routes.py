@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, jsonify
 from application import app
 import requests
 
@@ -12,6 +12,13 @@ def home():
 def colour():
     colour = requests.get('http://service2:5002/selection/colour')
     number = requests.get('http://service3:5003/selection/number')
-    sentence = requests.post('http://service4:5004/selection/sentence', json={"colour": colour.text, "number": number.text})
-    return render_template('fortune.html', title='Fortunes', colour=colour.text, number=number.text, sentence=sentence)
-
+    return jsonify({"colour": colour, "number": number})
+    
+@app.route('/get/fortune', methods = ['GET', 'POST'])
+def fortune():
+    sentence = requests.get('http://service4:5004/selection/sentence')
+    sentence = sentence.json()
+    colour = sentence["colour"]
+    number = sentence["number"]
+    result = sentence["result"]
+    return render_template('fortune.html', title='Fortunes', colour=colour, number=number, result=result)
