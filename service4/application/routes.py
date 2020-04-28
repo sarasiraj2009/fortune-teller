@@ -1,5 +1,5 @@
 from application import app
-from flask import request, Response
+from flask import request, Response, jsonify
 import requests
 
 @app.route('/selection/sentence', methods =  ['POST', 'GET'])
@@ -22,8 +22,8 @@ def sentence():
             result = "You'll have a red1 day"
     #elif colour == "white":
 
- 
-
-    return jsonify({"colour": colour, "number": number,"result": result})
-
-
+    dic = {}
+    dic["colour"] = colour
+    dic["number"] = number
+    dic["result"] = result
+    return jsonify(dic)

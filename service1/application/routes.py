@@ -10,9 +10,12 @@ def home():
 
 @app.route('/get/colour', methods = ['GET', 'POST'])
 def colour():
+    dic = {}
     colour = requests.get('http://service2:5002/selection/colour')
     number = requests.get('http://service3:5003/selection/number')
-    return jsonify({"colour": colour, "number": number})
+    dic["colour"] = colour
+    dic["number"] = number
+    return jsonify(dic)
     
 @app.route('/get/fortune', methods = ['GET', 'POST'])
 def fortune():
