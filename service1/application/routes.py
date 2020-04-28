@@ -16,8 +16,8 @@ def colour():
     
 @app.route('/get/fortune', methods = ['GET', 'POST'])
 def fortune():
-    sentence = requests.get('http://service4:5004/selection/sentence')
-    sentence = sentence.json()
+    response = requests.get('http://service4:5004/selection/sentence')
+    sentence = response.json()
     colour = sentence["colour"]
     number = sentence["number"]
     result = sentence["result"]
