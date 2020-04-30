@@ -11,8 +11,8 @@ def home():
 @app.route('/get/colour', methods = ['GET', 'POST'])
 def colour():
     dic = {}
-    colour = requests.get('http://service2:5002/selection/colour')
-    number = requests.get('http://service3:5003/selection/number')
+    colour = requests.get('http://service2:5002/selection/colour').text
+    number = requests.get('http://service3:5003/selection/number').text
     dic["colour"] = colour
     dic["number"] = number
     return jsonify(dic)
