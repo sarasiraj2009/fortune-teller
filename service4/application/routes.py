@@ -20,7 +20,8 @@ def sentence():
     elif colour == "red":
         if number == "1":
             result = "You'll have a red1 day"
-    #elif colour == "white":
+    else:
+        result = "You are a LOSER!"
 
     dic = {}
     dic["colour"] = colour
