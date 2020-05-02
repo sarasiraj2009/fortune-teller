@@ -4,27 +4,32 @@ import requests
 
 @app.route('/selection/sentence', methods =  ['POST', 'GET'])
 def sentence():
-    sentences = ['You are a winner!', 'Fortune 2','Fortune 3','Fortune 4','Fortune 5','Fortune 6','Fortune 7','Fortune 8']
+    sentences = [   'A secret admirer will soon send you a sign of affection',
+                    'Your heart is in a place to draw true happiness',
+                    'A thrilling time is in your near future',
+                    'The one you love is closer than you think',
+                    'Plan for many pleasures ahead',
+                    'Something you lost will turn up soon',
+                    'You are a winner',
+                    'You will have a great day']
+
     response = requests.get('http://service1:5000/get/colour')
     fortune = response.json()
     colour = fortune["colour"]
-    number = fortune["number"]
+    number = int(fortune["number"])-1
 
     result = ""
 
-    if colour == "green":
-        if number == "1":
-            result = "You'll have a green1 day"
-        elif number == "2":
-            result = "You'll have green2 day"
-    elif colour == "red":
-        if number == "1":
-            result = "You'll have a red1 day"
+    if (colour == 'red' and number == 1):
+        result = "You are a WINNER :)"
+    elif (colour == 'black' and number == 8):
+        result = "You are a LOSER :("
     else:
-        result = "You are a LOSER!"
+        result = sentences[number]
+    
 
     dic = {}
     dic["colour"] = colour
-    dic["number"] = number
+    dic["number"] = number+1
     dic["result"] = result
     return jsonify(dic)
