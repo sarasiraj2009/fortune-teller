@@ -36,5 +36,5 @@ class TestBase(TestCase):
         """
         Test that homepage is accessible without login
         """
-        response = self.client.get(url_for('http://service1:5000/home'))
+        response = self.client.get('http://service1:5000/home'))
         self.assertEqual(response.status_code, 200)
