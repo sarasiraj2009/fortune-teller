@@ -3,3 +3,7 @@
 .vscode
 .cache
 *.pyc
+
+#ignore varibles.tf
+
+terraform/variables.tf
