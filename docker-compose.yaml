@@ -2,6 +2,9 @@ version: '3.3'
 services:
   service1:
     build: ./service1
+    image: andreasandrews/service1
+    deploy:
+      replicas: 2
     ports:
       - protocol: tcp
         published: 5000
@@ -9,6 +12,9 @@ services:
 
   service2:
     build: ./service2
+    image: andreasandrews/service2
+    deploy:
+      replicas: 2
     ports:
        - protocol: tcp
          published: 5002
@@ -16,6 +22,9 @@ services:
 
   service3:
     build: ./service3
+    image: andreasandrews/service3
+    deploy:
+      replicas: 2
     ports:
       - protocol: tcp
         published: 5003
@@ -23,6 +32,9 @@ services:
 
   service4:
     build: ./service4
+    image: andreasandrews/service4
+    deploy:
+      replicas: 2
     ports:
       - protocol: tcp
         published: 5004
