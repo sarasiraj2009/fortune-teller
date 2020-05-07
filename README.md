@@ -5,13 +5,17 @@ _In response to the QAC group project._
 # **Index**
 
 
-[The Brief](#The Brief)
 
 [The Brief](#the-brief)
+
 [Deployment](#deployment)
+
 [Testing](#Testing)
+
 [ERD](#entity-relationship-diagram)
+
 [Technologies Used](#technologies-used)
+
 [Credits](#credits)
 
 
