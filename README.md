@@ -1,7 +1,7 @@
 # Fortune Teller
 _In response to the QAC group project._
 
-(http://fortune.eastus.cloudapp.azure.com:5000/)
+http://fortune.eastus.cloudapp.azure.com:5000/
 
 # **Index**
 
